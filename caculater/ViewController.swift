@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var temp = 0
+    var temp = 0.00
     var flag = 0
 
         @IBOutlet weak var Bsee: UITextField!
@@ -63,24 +63,52 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Buttonequal(_ sender: Any) {
-        if(flag == 1)
-        {
-            var sum = 0
-            sum = temp + Int(Bsee.text!)!
+        if(flag == 1){
+            var sum = 0.00
+            sum = temp + Double (Bsee.text!)!
             Bsee.text = "\(sum)"
+        }
+        if(flag == 2){
+            var sum = 0.00
+            sum = temp - Double (Bsee.text!)!
+            Bsee.text = "\(sum)"
+        }
+        if(flag == 3){
+            var sum = 0.00
+            sum = temp * Double(Bsee.text!)!
+            Bsee.text = "\(sum)"
+        }
+       if(flag == 4){
+        var sum = 0.00
+        sum = temp / Double(Bsee.text!)!
+        Bsee.text = "\(sum)"
         }
     }
     
-    
-    @IBAction func pluse(_ sender: Any) {
-        temp = Int(Bsee.text!)!
+    @IBAction func pluse(_ sender: Any){
+        temp = Double (Bsee.text!)!
         Bsee.text = ""
         flag = 1
     }
     
+    @IBAction func minus(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = ""
+        flag = 2
+    }
     
     
+    @IBAction func multiple(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = ""
+        flag = 3
+    }
     
+    @IBAction func division(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = ""
+        flag = 4
+    }
     
 }
 
