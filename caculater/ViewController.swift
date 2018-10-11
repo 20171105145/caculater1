@@ -57,11 +57,6 @@ class ViewController: UIViewController {
     @IBAction func B9(_ sender: Any) {
         Bsee.text = Bsee.text!+"9"
     }
-    
-    @IBAction func Buttondelete(_ sender: Any) {
-        Bsee.text = ""
-    }
-    
     @IBAction func Buttonequal(_ sender: Any) {
         if(flag == 1){
             var sum = 0.00
@@ -83,6 +78,10 @@ class ViewController: UIViewController {
         sum = temp / Double(Bsee.text!)!
         Bsee.text = "\(sum)"
         }
+       
+    }
+    @IBAction func Buttondelete(_ sender: Any) {
+        Bsee.text = ""
     }
     
     @IBAction func pluse(_ sender: Any){
@@ -109,6 +108,19 @@ class ViewController: UIViewController {
         Bsee.text = ""
         flag = 4
     }
+    @IBAction func radixpoint(_ sender: Any) {
+        Bsee.text = Bsee.text! + "."
+    }
     
+    @IBAction func bracketleft(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = Bsee.text!
+    }
+    
+    @IBAction func percent(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        temp = temp * 0.01
+        Bsee.text = "\(temp)"
+    }
 }
 
