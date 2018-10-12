@@ -103,14 +103,6 @@
                                     <action selector="B8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfN-7r-aaf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS2-KU-lNJ">
-                                <rect key="frame" x="42" y="336" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="c"/>
-                                <connections>
-                                    <action selector="Buttondelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wue-xT-Usn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szX-CU-v5k">
                                 <rect key="frame" x="252" y="104" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -236,6 +228,14 @@
                                 <state key="normal" title="e"/>
                                 <connections>
                                     <action selector="e:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFP-Ty-5Qt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS2-KU-lNJ">
+                                <rect key="frame" x="42" y="336" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="c"/>
+                                <connections>
+                                    <action selector="Buttondelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wue-xT-Usn"/>
                                 </connections>
                             </button>
                         </subviews>

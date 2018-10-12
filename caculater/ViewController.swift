@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var temp = 0.00
+    var temp:Double = 0.00
     var flag = 0
 
         @IBOutlet weak var Bsee: UITextField!
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         }
        if(flag == 4){
         var sum = 0.00
-        sum = temp / Double(Bsee.text!)!
+        sum = temp  / Double(Bsee.text!)!
         Bsee.text = "\(sum)"
         }
        
