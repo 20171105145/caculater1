@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         if(flag == 1){
             var sum = 0.00
             sum = temp + Double (Bsee.text!)!
-            Bsee.text = "\(sum)"
+            Bsee.text = "\(sum)\n hello"
         }
         if(flag == 2){
             var sum = 0.00
@@ -111,16 +111,23 @@ class ViewController: UIViewController {
     @IBAction func radixpoint(_ sender: Any) {
         Bsee.text = Bsee.text! + "."
     }
-    
-    @IBAction func bracketleft(_ sender: Any) {
-        temp = Double (Bsee.text!)!
-        Bsee.text = Bsee.text!
-    }
-    
     @IBAction func percent(_ sender: Any) {
         temp = Double (Bsee.text!)!
         temp = temp * 0.01
         Bsee.text = "\(temp)"
     }
+    
+    @IBAction func bracketleft(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = Bsee.text!//括号优先级，栈
+    }
+    
+    @IBAction func x2(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        temp = temp * temp
+        Bsee.text = "\(temp)"
+    }
+    
+    
 }
 
