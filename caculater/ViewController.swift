@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         if(flag == 1){
             var sum = 0.00
             sum = temp + Double (Bsee.text!)!
-            Bsee.text = "\(sum)\n hello"
+            Bsee.text = "\(sum)"
         }
         if(flag == 2){
             var sum = 0.00
@@ -126,6 +126,26 @@ class ViewController: UIViewController {
         temp = Double (Bsee.text!)!
         temp = temp * temp
         Bsee.text = "\(temp)"
+    }
+    
+    @IBAction func x³(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        temp = temp * temp * temp
+        Bsee.text = "\(temp)"
+    }
+    
+    @IBAction func x(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        temp = 1 / temp
+        Bsee.text = "\(temp)"
+    }
+    
+    @IBAction func π(_ sender: Any) {
+        Bsee.text = "3.141592653589793"
+    }
+    
+    @IBAction func e(_ sender: Any) {
+        Bsee.text = "2.718281828459045"
     }
     
     
