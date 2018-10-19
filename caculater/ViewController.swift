@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var temp:Double = 0.00
     var flag = 0
+    var i = 0
 
         @IBOutlet weak var Bsee: UITextField!
     override func viewDidLoad() {
@@ -148,6 +149,16 @@ class ViewController: UIViewController {
         Bsee.text = "2.718281828459045"
     }
     
-    
+    @IBAction func factorial(_ sender: Any) {
+        temp = Int (Bsee.text!)
+        if i <= Int(temp) {
+            i = 1
+            for i in 1...Int (temp){
+                temp = temp * i
+                i = i + 1
+            }
+            Bsee.text = "\(temp)"
+            
+        }
 }
-
+}
