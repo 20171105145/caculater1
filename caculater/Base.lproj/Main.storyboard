@@ -252,6 +252,14 @@
                                     <action selector="factorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeP-Ae-3Y4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-PI-2c7">
+                                <rect key="frame" x="172" y="508" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+/-"/>
+                                <connections>
+                                    <action selector="minuspulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NZt-HU-Twb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

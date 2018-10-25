@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var temp:Double = 0.00
     var flag = 0
-    var i = 0
+   
 
         @IBOutlet weak var Bsee: UITextField!
     override func viewDidLoad() {
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         if(flag == 1){
             var sum = 0.00
             sum = temp + Double (Bsee.text!)!
-            Bsee.text = "\(sum)"
+             Bsee.text = "\(sum)"
         }
         if(flag == 2){
             var sum = 0.00
@@ -149,16 +149,38 @@ class ViewController: UIViewController {
         Bsee.text = "2.718281828459045"
     }
     
+    
     @IBAction func factorial(_ sender: Any) {
-        temp = Int (Bsee.text!)
-        if i <= Int(temp) {
-            i = 1
-            for i in 1...Int (temp){
-                temp = temp * i
+        var i = 1.00
+        var a = 0
+        var b = 0.00
+        var c = 0.00
+        var s = 1.00
+        a =  Int(temp / 1.00)
+        temp = Double (Bsee.text!)!
+        c = Double (a)
+        b = temp - c
+        if b == 0.00{
+            while i <= b {
+                s = s * i
                 i = i + 1
             }
-            Bsee.text = "\(temp)"
-            
+        }
+        Bsee.text = "\(s)"
+        if b != 0.00{
+           Bsee.text = "不是数字"
         }
 }
+    @IBAction func minuspulse(_ sender: Any) {
+        temp = Double(Bsee.text!)!
+        temp = temp * (-1)
+        Bsee.text = "\(temp)"
+        
+    }
+    
+    
+    
+    
+    
+    
 }
