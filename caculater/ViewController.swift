@@ -11,52 +11,107 @@ import UIKit
 class ViewController: UIViewController {
     var temp:Double = 0.00
     var flag = 0
-   
-
+    var seeagain = 0
+    
         @IBOutlet weak var Bsee: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Bsee.text = "0"
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func B1(_ sender: Any) {
-        Bsee.text = Bsee.text!+"1"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"1"
+        }
+        else{
+            Bsee.text = "1"
+        }
+        seeagain = 1
             }
     
     
     @IBAction func B2(_ sender: Any) {
-        Bsee.text = Bsee.text!+"2"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"2"
+        }
+        else{
+            Bsee.text = "2"
+        }
+         seeagain = 1
     }
     
     
     @IBAction func B3(_ sender: Any) {
-        Bsee.text = Bsee.text!+"3"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"3"
+        }
+        else{
+            Bsee.text = "3"
+        }
+         seeagain = 1
     }
     
     
     @IBAction func B4(_ sender: Any) {
-        Bsee.text = Bsee.text!+"4"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"4"
+        }
+        else{
+            Bsee.text = "4"
+        }
+         seeagain = 1
     }
     
     
     @IBAction func B5(_ sender: Any) {
-        Bsee.text = Bsee.text!+"5"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"5"
+        }
+        else{
+            Bsee.text = "5"
+        }
+         seeagain = 1
     }
     
-    
+
     @IBAction func B6(_ sender: Any) {
-        Bsee.text = Bsee.text!+"6"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"6"
+        }
+        else{
+            Bsee.text = "6"
+        }
+        seeagain = 1
     }
     
     @IBAction func B7(_ sender: Any) {
-        Bsee.text = Bsee.text!+"7"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"7"
+        }
+        else{
+            Bsee.text = "7"
+        }
+        seeagain = 1
     }
     
     @IBAction func B8(_ sender: Any) {
-        Bsee.text = Bsee.text!+"8"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"8"
+        }
+        else{
+            Bsee.text = "8"
+        }
+        seeagain = 1
     }
     
     @IBAction func B9(_ sender: Any) {
-        Bsee.text = Bsee.text!+"9"
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"9"
+        }
+        else{
+            Bsee.text = "9"
+        }
+        seeagain = 1
     }
     @IBAction func Buttonequal(_ sender: Any) {
         if(flag == 1){
@@ -79,34 +134,48 @@ class ViewController: UIViewController {
         sum = temp  / Double(Bsee.text!)!
         Bsee.text = "\(sum)"
         }
+        seeagain = 2
        
     }
     @IBAction func Buttondelete(_ sender: Any) {
-        Bsee.text = ""
+        Bsee.text = "0"
+        seeagain = 2
     }
     
     @IBAction func pluse(_ sender: Any){
+        if flag == 1{
+            Bsee.text = "\(temp + Double (Bsee.text!)!)"
+        }
         temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        seeagain = 2
         flag = 1
-    }
+   }
     
     @IBAction func minus(_ sender: Any) {
+        if flag == 2{
+            Bsee.text = "\(temp - Double (Bsee.text!)!)"
+        }
         temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        seeagain = 2
         flag = 2
     }
     
     
     @IBAction func multiple(_ sender: Any) {
+        if flag == 3{
+            Bsee.text = "\(temp * Double(Bsee.text!)!)"
+        }
         temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        seeagain = 2
         flag = 3
     }
     
     @IBAction func division(_ sender: Any) {
+        if flag == 4{
+            Bsee.text = "\(temp  / Double(Bsee.text!)!)"
+        }
         temp = Double (Bsee.text!)!
-        Bsee.text = ""
+        seeagain = 2
         flag = 4
     }
     @IBAction func radixpoint(_ sender: Any) {
@@ -175,7 +244,6 @@ class ViewController: UIViewController {
         temp = Double(Bsee.text!)!
         temp = temp * (-1)
         Bsee.text = "\(temp)"
-        
     }
     
     
