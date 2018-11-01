@@ -138,8 +138,11 @@ class ViewController: UIViewController {
        
     }
     @IBAction func Buttondelete(_ sender: Any) {
+        temp = 0.00
+        flag = 0
+        seeagain = 0
         Bsee.text = "0"
-        seeagain = 2
+        
     }
     
     @IBAction func pluse(_ sender: Any){
@@ -221,24 +224,25 @@ class ViewController: UIViewController {
     
     @IBAction func factorial(_ sender: Any) {
         var i = 1.00
-        var a = 0
         var b = 0.00
-        var c = 0.00
+        var c:Int = 0//Double型整数的temp
         var s = 1.00
-        a =  Int(temp / 1.00)
         temp = Double (Bsee.text!)!
-        c = Double (a)
-        b = temp - c
-        if b == 0.00{
-            while i <= b {
+        c = Int (temp)
+        b = temp - Double(c)
+        if  b != 0 {
+            Bsee.text = "不是数字"
+        }
+       else{
+            while Int(i) <= c {
                 s = s * i
                 i = i + 1
             }
+                  Bsee.text = "\(s)"
         }
-        Bsee.text = "\(s)"
-        if b != 0.00{
-           Bsee.text = "不是数字"
-        }
+  
+      
+        
 }
     @IBAction func minuspulse(_ sender: Any) {
         temp = Double(Bsee.text!)!
@@ -247,8 +251,20 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func ex(_ sender: Any) {
+        var s:Double = 2.718281828459045
+        var c:Int = 0
+        var i = 1
+         temp = Double(Bsee.text!)!
+        c = Int (temp)
+        while i <= c{
+        s = s * 2.718281828459045
+        Bsee.text = "\(s)"
+
+    }
     
     
     
     
+}
 }
