@@ -113,6 +113,16 @@ class ViewController: UIViewController {
         }
         seeagain = 1
     }
+    
+    @IBAction func B0(_ sender: Any) {
+        if seeagain == 1{
+            Bsee.text = Bsee.text!+"9"
+        }
+        else{
+            Bsee.text = "0"
+        }
+        seeagain = 1
+    }
     @IBAction func Buttonequal(_ sender: Any) {
         if(flag == 1){
             var sum = 0.00
