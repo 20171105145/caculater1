@@ -265,14 +265,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func AC(_ sender: Any) {
-        temp = Double(Bsee.text!)!
-        var temp2:Double = 0.00
-        temp2 = Double(Bsee.text!)!
-         Bsee.text = ""
-        temp = temp2
-       Bsee.text = "\(temp)"
-        
-    }
+        Bsee.text = ""
+        }
     
 }
 
