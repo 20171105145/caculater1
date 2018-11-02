@@ -221,7 +221,6 @@ class ViewController: UIViewController {
         Bsee.text = "2.718281828459045"
     }
     
-    
     @IBAction func factorial(_ sender: Any) {
         var i = 1.00
         var b = 0.00
@@ -240,9 +239,6 @@ class ViewController: UIViewController {
             }
                   Bsee.text = "\(s)"
         }
-  
-      
-        
 }
     @IBAction func minuspulse(_ sender: Any) {
         temp = Double(Bsee.text!)!
@@ -250,21 +246,27 @@ class ViewController: UIViewController {
         Bsee.text = "\(temp)"
     }
     
-    
     @IBAction func ex(_ sender: Any) {
-        var s:Double = 2.718281828459045
-        var c:Int = 0
-        var i = 1
-         temp = Double(Bsee.text!)!
-        c = Int (temp)
-        while i <= c{
-        s = s * 2.718281828459045
-        Bsee.text = "\(s)"
+        temp = Double(Bsee.text!)!
+        temp = Double (exp (temp))
+        Bsee.text = "\(temp)"
 
     }
     
     
-    
+    @IBAction func AC(_ sender: Any) {
+        temp = Double(Bsee.text!)!
+        var temp2:Double = 0.00
+        temp2 = Double(Bsee.text!)!
+         Bsee.text = ""
+        temp = temp2
+       Bsee.text = "\(temp)"
+        
+    }
     
 }
-}
+
+
+
+
+
