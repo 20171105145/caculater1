@@ -144,7 +144,12 @@ class ViewController: UIViewController {
         sum = temp  / Double(Bsee.text!)!
         Bsee.text = "\(sum)"
         }
+        if(flag == 5){
+            temp = Foundation.pow(temp, Double(Bsee.text!)!)
+            Bsee.text = "\(temp)"
+        }
         seeagain = 2
+        
        
     }
     @IBAction func Buttondelete(_ sender: Any) {
@@ -263,10 +268,20 @@ class ViewController: UIViewController {
 
     }
     
-    
     @IBAction func AC(_ sender: Any) {
         Bsee.text = ""
         }
+   
+    @IBAction func xy(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        flag = 5
+        seeagain = 2
+    }
+    
+    @IBAction func sin(_ sender: Any) {
+        temp = Double (Bsee.text!)!
+        Bsee.text = "\(temp)"
+    }
     
 }
 
