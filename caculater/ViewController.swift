@@ -278,20 +278,41 @@ class ViewController: UIViewController {
         seeagain = 2
     }
     
-    @IBAction func sin(_ sender: Any) {
-        temp = Double (Bsee.text!)!
-        var result:Double = 0.00
-        result = Double(sin(30))
-        temp = result
+    @IBAction func sinbtn(_ sender: Any) {
+       temp = Double(Bsee.text!)!
+        if (Int(temp) % 180 == 0)
+        {
+            Bsee.text = "\(0.00)"
+        }
+        else{
+        Bsee.text = "\(sin(temp / 180 * 3.141592653589397))"
+        }
+        
     }
     
-    @IBAction func cos(_ sender: Any) {
+    @IBAction func cosbtn(_ sender: Any) {
+        temp = Double(Bsee.text!)!
+        if (Int(temp) % 90 == 0)
+        {
+            Bsee.text = "\(0.00)"
+        }
+        else {
+            Bsee.text = "\(cos(temp / 180 * 3.141592653589397))"
+        }
         
     }
     
     
-    @IBAction func tan(_ sender: Any) {
-         
+    @IBAction func tanbtn(_ sender: Any) {
+        temp = Double(Bsee.text!)!
+        switch temp {
+        case (temp % 90 ):
+            Bsee.text = "\(cos(temp / 180 * 3.141592653589397))"
+            <#code#>
+        default:
+            <#code#>
+        }
+        Bsee.text = "\(tan(temp / 180 * 3.141592653589397)))"
     }
 }
 
