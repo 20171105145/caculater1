@@ -5,7 +5,6 @@
 //  Created by 杜炎峰 on 2018/9/28.
 //  Copyright © 2018年 杜炎峰. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -116,7 +115,7 @@ class ViewController: UIViewController {
     
     @IBAction func B0(_ sender: Any) {
         if seeagain == 1{
-            Bsee.text = Bsee.text!+"9"
+            Bsee.text = Bsee.text!+"0"
         }
         else{
             Bsee.text = "0"
@@ -207,7 +206,8 @@ class ViewController: UIViewController {
     
     @IBAction func bracketleft(_ sender: Any) {
         temp = Double (Bsee.text!)!
-        Bsee.text = Bsee.text!//括号优先级，栈
+
+        //括号优先级，栈
     }
     
     @IBAction func x2(_ sender: Any) {
@@ -280,9 +280,19 @@ class ViewController: UIViewController {
     
     @IBAction func sin(_ sender: Any) {
         temp = Double (Bsee.text!)!
-        Bsee.text = "\(temp)"
+        var result:Double = 0.00
+        result = Double(sin(30))
+        temp = result
     }
     
+    @IBAction func cos(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func tan(_ sender: Any) {
+         
+    }
 }
 
 
