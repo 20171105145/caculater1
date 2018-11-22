@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var flag = 0
     var seeagain = 0
     
-        @IBOutlet weak var Bsee: UITextField!
+    @IBOutlet weak var Bsee: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         Bsee.text = "0"
@@ -203,13 +203,6 @@ class ViewController: UIViewController {
         temp = temp * 0.01
         Bsee.text = "\(temp)"
     }
-    
-    @IBAction func bracketleft(_ sender: Any) {
-        temp = Double (Bsee.text!)!
-
-        //括号优先级，栈
-    }
-    
     @IBAction func x2(_ sender: Any) {
         temp = Double (Bsee.text!)!
         temp = temp * temp
@@ -265,9 +258,7 @@ class ViewController: UIViewController {
         temp = Double(Bsee.text!)!
         temp = Double (exp (temp))
         Bsee.text = "\(temp)"
-
     }
-    
     @IBAction func AC(_ sender: Any) {
         Bsee.text = ""
         }
@@ -277,7 +268,6 @@ class ViewController: UIViewController {
         flag = 5
         seeagain = 2
     }
-    
     @IBAction func sinbtn(_ sender: Any) {
        temp = Double(Bsee.text!)!
         if (Int(temp) % 180 == 0)
@@ -287,9 +277,7 @@ class ViewController: UIViewController {
         else{
         Bsee.text = "\(sin(temp / 180 * 3.141592653589397))"
         }
-        
     }
-    
     @IBAction func cosbtn(_ sender: Any) {
         temp = Double(Bsee.text!)!
         if (Int(temp) % 90 == 0)
@@ -299,20 +287,20 @@ class ViewController: UIViewController {
         else {
             Bsee.text = "\(cos(temp / 180 * 3.141592653589397))"
         }
-        
     }
-    
-    
     @IBAction func tanbtn(_ sender: Any) {
         temp = Double(Bsee.text!)!
-        switch temp {
-        case (temp % 90 ):
-            Bsee.text = "\(cos(temp / 180 * 3.141592653589397))"
-            <#code#>
-        default:
-            <#code#>
+        if (Int(temp) % 90 == 0){
+             Bsee.text = " 不存在 "
+        }
+        else {
+            Bsee.text = "\(tan(temp / 180 * 3.141592653589397))"
         }
         Bsee.text = "\(tan(temp / 180 * 3.141592653589397)))"
+    }
+    
+    @IBAction func me(_ sender: Any) {
+         Bsee.text = "没有错，杜炎峰是最可爱的大妖怪"
     }
 }
 
